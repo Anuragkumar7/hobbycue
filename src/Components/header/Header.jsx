@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,15 +7,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './icon.png';
 
-//bootstrap
+// Bootstrap
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./header.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './header.css';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary navbar" >
+    <Navbar expand="lg" className="bg-body-tertiary navbar">
       <Container fluid>
         <Navbar.Brand className='logo' href="#"><img src={logo} alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -24,31 +24,28 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-             <Form className="d-flex searcharea">
-            <Form.Control
-              type="search"
-              placeholder="Search here"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success searchbtn"><i class="bi bi-search"></i></Button>
-          </Form>
-          <div className='icons'>
-          <Nav.Link className="home" href="#action1"><i class="bi bi-compass-fill text"></i></Nav.Link><p>Explore</p>
-            <NavDropdown title="" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3"></NavDropdown.Item>
-            
-            </NavDropdown>
-            <Nav.Link className="home" href="#action1"><i class="bi bi-star-fill"></i></Nav.Link><p>Hobbies</p>
-            <NavDropdown title="" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3"></NavDropdown.Item>
-            
-            </NavDropdown>
-            <Nav.Link className="home" href="#action1"><i class="bi bi-bookmark-fill"></i></Nav.Link>
-            <Nav.Link href="#action2"><i class="bi bi-bell-fill"></i></Nav.Link>
-            <Nav.Link className="home" href="#action1"> <i class="bi bi-cart-fill"></i></Nav.Link>
-           
-          </div>
+            <Form className="d-flex searcharea">
+              <Form.Control
+                type="search"
+                placeholder="Search here"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success searchbtn"><i className="bi bi-search"></i></Button>
+            </Form>
+            <div className={`icons ${window.innerWidth <= 576 ? 'justify-content-start' : ''}`}>
+              <Nav.Link className="home" href="#action1"><i className="bi bi-compass-fill text"></i></Nav.Link><p>Explore</p>
+              <NavDropdown title="" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3"></NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link className="home" href="#action1"><i className="bi bi-star-fill"></i></Nav.Link><p>Hobbies</p>
+              <NavDropdown title="" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3"></NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link className="home" href="#action1"><i className="bi bi-bookmark-fill"></i></Nav.Link>
+              <Nav.Link href="#action2"><i className="bi bi-bell-fill"></i></Nav.Link>
+              <Nav.Link className="home" href="#action1"> <i className="bi bi-cart-fill"></i></Nav.Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
         <Button variant="outline-success signinbtn">Sign in</Button>

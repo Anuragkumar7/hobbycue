@@ -2,7 +2,6 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Container, Row, Col } from 'react-bootstrap';
-// import { BsFacebook, BsTwitter, BsGoogle, BsInstagram, BsLinkedin, BsGithub, BsGem, BsHouse, BsEnvelope, BsPhone, BsPrint } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -127,14 +126,14 @@ const Footer = () => {
           </a>
         </div>
         <div style={{padding: '0'}}>
-        <div className='me-5 d-none d-lg-block mb-2' style={{margin: '20px 0'}}>
+        <div className='me-5 mt-3 d-none d-lg-block mb-2' style={{margin: '20px 0'}}>
           <span><b>Invite Friends</b></span>
         </div>
-        <Form className="d-flex searcharea">
+        <Form className="d-flex flex-column align-items-center align-items-md-start searcharea">
             <Form.Control
               type="search"
               placeholder="Email ID"
-              className="me-2"
+              className="me-2 mb-2"
               aria-label="Search"
             />
             <Button variant="outline-success" 
