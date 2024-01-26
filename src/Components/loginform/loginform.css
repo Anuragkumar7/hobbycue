@@ -1,0 +1,35 @@
+.btnsubmit{
+    background-color: #8064a2;
+    border-color: #8064a2;
+    padding: 5px 115px;
+    border-radius: 8px;
+    width: 400px;
+}
+.email{
+    margin-top: 20px;
+    padding: 10px 60px;
+    border-radius: 8px;
+}
+
+.password{
+    padding: 10px 60px;
+    border-radius: 8px;
+}
+.loginbtn2{
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-color: #8064a2;
+    color: #8064a2;
+    padding-left: 0;
+}
+
+.loginbtn2:hover{
+    background-color: #8064a2;
+    border-color: #8064a2;
+    color: #fff;
+}
+
+.policy{
+    font-size: small;
+}
